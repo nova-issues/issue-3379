@@ -14,30 +14,35 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
+        $now = now();
         $password = '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'; // password
 
         User::forceCreate([
             'name' => 'Taylor Otwell',
             'email' => 'taylor@laravel.com',
             'password' => $password,
+            'email_verified_at' => $now,
         ]);
 
         User::forceCreate([
             'name' => 'Mohamed Said',
             'email' => 'mohamed@laravel.com',
             'password' => $password,
+            'email_verified_at' => $now,
         ]);
 
         User::forceCreate([
             'name' => 'David Hemphill',
             'email' => 'david@laravel.com',
             'password' => $password,
+            'email_verified_at' => $now,
         ]);
 
         User::forceCreate([
             'name' => 'Laravel Nova',
             'email' => 'nova@laravel.com',
             'password' => $password,
+            'email_verified_at' => $now,
         ]);
     }
 }
